@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Send money to Kenya, Nigeria, Ghana, Philippines with 95% lower fees. Powered by USDT stablecoins. Fast, secure, and simple.">
+    <meta name="keywords" content="money transfer, remittance, Kenya, Nigeria, Ghana, Philippines, USDT, stablecoin, low fees, M-Pesa">
+    <meta name="author" content="ZeroPesa">
+    <meta name="theme-color" content="#2D9B81">
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ZeroPesa - Send Money Home 95% Cheaper">
+    <meta property="og:description" content="Send money to Kenya, Nigeria, Ghana, Philippines with 95% lower fees. Powered by USDT stablecoins. Fast, secure, and simple.">
+    <meta property="og:image" content="https://zeropesa.com/assets/og-image.jpg">
+    <meta property="og:url" content="https://zeropesa.com">
+    <meta property="og:site_name" content="ZeroPesa">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ZeroPesa - Send Money Home 95% Cheaper">
+    <meta name="twitter:description" content="Send money to Kenya, Nigeria, Ghana, Philippines with 95% lower fees. Powered by USDT stablecoins.">
+    <meta name="twitter:image" content="https://zeropesa.com/assets/twitter-card.jpg">
+    <meta name="twitter:creator" content="@zeropesa">
+
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://zeropesa.com">
+
+    <!-- Performance Optimizations: Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>ZeroPesa - Send Money Home 95% Cheaper</title>
+
+    <!-- Structured Data (JSON-LD) for SEO - Deferred for performance -->
+    <script type="application/ld+json" defer>
+    {
+        "@context": "https://schema.org",
+        "@type": "FinancialService",
+        "name": "ZeroPesa",
+        "description": "International money transfer service using USDT stablecoins for low-fee remittances",
+        "url": "https://zeropesa.com",
+        "logo": "https://zeropesa.com/assets/logo.png",
+        "areaServed": ["KE", "NG", "GH", "PH"],
+        "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://zeropesa.com",
+            "availableLanguage": ["en"]
+        },
+        "sameAs": [
+            "https://twitter.com/zeropesa",
+            "https://linkedin.com/company/zeropesa"
+        ]
+    }
+    </script>
+
+    <!-- Critical CSS Inline for Above-the-Fold (First 14KB) -->
+    <style>
+        /* Critical CSS: Base + Header + Hero (Above the fold) */
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}:root{--primary-teal:#2D9B81;--teal-light:#45C4A8;--teal-dark:#1F6F5C;--accent-orange:#FF6B35;--black:#1A1A1A;--grey-dark:#333;--grey-mid:#666;--grey-light:#F5F5F5;--white:#FFF;--font-primary:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;--font-size-hero:clamp(2.5rem,5vw,4.5rem);--font-size-body:1.125rem;--spacing-sm:1rem;--spacing-md:2rem;--max-width:1200px;--border-radius:1rem;--border-radius-sm:.5rem}body{font-family:var(--font-primary);font-size:var(--font-size-body);line-height:1.6;color:var(--black);background-color:var(--white);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}h1{font-size:var(--font-size-hero);font-weight:700;line-height:1.2}#header{position:fixed;top:0;left:0;width:100%;background:rgba(255,255,255,.85);z-index:1000;transition:all .4s cubic-bezier(.4,0,.2,1);border-bottom:1px solid transparent}.header-container{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;max-width:var(--max-width);margin:0 auto}.logo a{font-size:1.5rem;font-weight:700;color:var(--primary-teal);text-decoration:none}#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--teal-dark)0%,var(--primary-teal)50%,var(--teal-light)100%);position:relative;overflow:hidden;padding-top:80px}.container{max-width:var(--max-width);margin:0 auto;padding:0 var(--spacing-md)}.btn-primary{display:inline-block;padding:1rem 2.5rem;background:linear-gradient(135deg,var(--accent-orange)0%,#FF8C5A 100%);color:var(--white);font-weight:600;font-size:1rem;border-radius:var(--border-radius-sm);text-decoration:none;transition:all .3s cubic-bezier(.4,0,.2,1)}
+    </style>
+
+    <!-- Full Stylesheet - Loaded asynchronously -->
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+
+    <!-- Deferred JavaScript for optimal loading -->
+    <script src="script.js" defer></script>
+
+    <!-- Performance Budget Monitoring -->
+    <!--
+    PERFORMANCE BUDGET:
+    - HTML: < 15KB (gzipped)
+    - CSS: < 20KB (gzipped)
+    - JS: < 15KB (gzipped)
+    - Total: < 50KB (gzipped)
+
+    CORE WEB VITALS TARGETS:
+    - Largest Contentful Paint (LCP): < 2.5s
+    - First Input Delay (FID): < 100ms
+    - Cumulative Layout Shift (CLS): < 0.1
+    - First Contentful Paint (FCP): < 1.5s
+    - Time to Interactive (TTI): < 3s
+    -->
+</head>
+<body>
+    <!-- Skip to Main Content Link (Accessibility Enhancement) -->
+    <a href="#main-content" class="skip-to-main" aria-label="Skip to main content">Skip to main content</a>
+
+    <!-- Header Navigation -->
+    <header id="header" role="banner">
+        <nav class="container header-container" role="navigation" aria-label="Main navigation">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="#hero" aria-label="ZeroPesa home">ZeroPesa</a>
+            </div>
+
+            <!-- Download button -->
+            <a href="#cta" class="btn-primary" aria-label="Download ZeroPesa app">Download App</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" id="main-content" role="main" aria-labelledby="hero-title">
+        <div class="container hero-container">
+            <!-- Left Column: Content -->
+            <div class="hero-content">
+                <h1 id="hero-title" class="hero-title">Send Money Home for KES 30, Not KES 6,000</h1>
+                <p class="hero-subtitle">Kenyans abroad send money 95% cheaper with ZeroPesa. Same speed. Zero middlemen.</p>
+
+                <div class="download-buttons" role="group" aria-label="Download app buttons">
+                    <a href="#" class="btn-app-store" aria-label="Download on the App Store">
+                        <span class="app-icon" aria-hidden="true">&#63743;</span>
+                        <div class="app-text">
+                            <span class="app-label">Download on the</span>
+                            <span class="app-name">App Store</span>
+                        </div>
+                    </a>
+                    <a href="#" class="btn-google-play" aria-label="Get it on Google Play">
+                        <span class="app-icon" aria-hidden="true">&#9654;</span>
+                        <div class="app-text">
+                            <span class="app-label">GET IT ON</span>
+                            <span class="app-name">Google Play</span>
+                        </div>
+                    </a>
+                </div>
+
+                <p class="hero-availability">Available for iOS & Android</p>
+            </div>
+
+            <!-- Right Column: Phone Mockup -->
+            <div class="hero-visual" role="img" aria-label="Phone mockup showing ZeroPesa app features">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="app-showcase" role="region" aria-label="App features carousel" aria-live="polite">
+                            <div class="showcase-item active">
+                                <div class="showcase-icon" role="img" aria-label="Money transfer icon">💸</div>
+                                <h3>Send Money</h3>
+                                <p>Transfer funds instantly to Kenya, Nigeria, Ghana & Philippines</p>
+                            </div>
+                            <div class="showcase-item">
+                                <div class="showcase-icon" role="img" aria-label="Shopping icon">🛒</div>
+                                <h3>Buy Goods/Services</h3>
+                                <p>Pay for goods and services directly with USDT</p>
+                            </div>
+                            <div class="showcase-item">
+                                <div class="showcase-icon" role="img" aria-label="Bills payment icon">📱</div>
+                                <h3>Pay Bills</h3>
+                                <p>Settle utility bills, subscriptions, and more</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="section-padding">
+        <div class="container">
+            <h2 class="problem-title">The Old Way is Robbery</h2>
+
+            <div class="problem-cards">
+                <article class="problem-card" data-delay="0">
+                    <div class="card-stat">KES 6,000 gone</div>
+                    <h3 class="card-title">On every KES 100,000 you send</h3>
+                    <p class="card-description">That's your family's school fees.</p>
+                </article>
+
+                <article class="problem-card" data-delay="200">
+                    <div class="card-stat">3-7 days waiting</div>
+                    <h3 class="card-title">While your money sits in limbo</h3>
+                    <p class="card-description">Emergencies can't wait.</p>
+                </article>
+
+                <article class="problem-card" data-delay="400">
+                    <div class="card-stat">Predatory rates</div>
+                    <h3 class="card-title">Hidden fees. Bad exchange rates.</h3>
+                    <p class="card-description">They bet you won't notice.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section with Interactive Calculator -->
+    <section id="solution" class="section-padding" aria-labelledby="solution-title">
+        <div class="container">
+            <h2 id="solution-title" class="solution-title">Same Transfer. Different Math.</h2>
+            <p class="solution-subtitle">See what you actually save</p>
+
+            <!-- Amount Slider with Accessibility -->
+            <div class="amount-selector" role="group" aria-labelledby="amount-label">
+                <label id="amount-label" for="amount-slider">Sending Amount:</label>
+                <div class="amount-display" aria-live="polite" aria-atomic="true">
+                    KES <span id="current-amount">50,000</span>
+                </div>
+                <input
+                    type="range"
+                    id="amount-slider"
+                    min="10000"
+                    max="500000"
+                    step="10000"
+                    value="50000"
+                    aria-label="Select transfer amount from 10,000 to 500,000 Kenyan Shillings"
+                    aria-valuemin="10000"
+                    aria-valuemax="500000"
+                    aria-valuenow="50000"
+                    aria-valuetext="50,000 Kenyan Shillings"
+                    role="slider"
+                >
+                <div class="amount-range" aria-hidden="true">
+                    <span>KES 10,000</span>
+                    <span>KES 500,000</span>
+                </div>
+            </div>
+
+            <!-- Comparison Cards -->
+            <div class="comparison-wrapper">
+                <div class="comparison-cards">
+                    <!-- Old Way Card -->
+                    <article class="comparison-card old-way">
+                        <div class="card-badge">❌ Old Way</div>
+                        <div class="fee-breakdown">
+                            <div class="fee-row">
+                                <span class="fee-label">Transfer Fee (6%)</span>
+                                <span class="fee-value" id="old-fee">KES 3,000</span>
+                            </div>
+                            <div class="fee-row">
+                                <span class="fee-label">Exchange Markup (2%)</span>
+                                <span class="fee-value" id="old-markup">KES 1,000</span>
+                            </div>
+                            <div class="fee-divider"></div>
+                            <div class="fee-row total">
+                                <span class="fee-label">Total Cost</span>
+                                <span class="fee-value cost-highlight" id="old-total">KES 4,000</span>
+                            </div>
+                            <div class="fee-row receive">
+                                <span class="fee-label">They Receive</span>
+                                <span class="fee-value" id="old-receive">KES 46,000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ZeroPesa Card -->
+                    <article class="comparison-card zeropesa">
+                        <div class="card-badge">✅ ZeroPesa</div>
+                        <div class="fee-breakdown">
+                            <div class="fee-row">
+                                <span class="fee-label">Transfer Fee (0.3%)</span>
+                                <span class="fee-value" id="new-fee">KES 150</span>
+                            </div>
+                            <div class="fee-row">
+                                <span class="fee-label">Exchange Rate</span>
+                                <span class="fee-value">Mid-market</span>
+                            </div>
+                            <div class="fee-divider"></div>
+                            <div class="fee-row total">
+                                <span class="fee-label">Total Cost</span>
+                                <span class="fee-value cost-highlight" id="new-total">KES 150</span>
+                            </div>
+                            <div class="fee-row receive">
+                                <span class="fee-label">They Receive</span>
+                                <span class="fee-value" id="new-receive">KES 49,850</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Savings Highlight -->
+                <div class="savings-highlight">
+                    <div class="savings-amount">
+                        You save <span id="savings">KES 3,850</span>
+                    </div>
+                    <div class="savings-percent">
+                        <span id="savings-percent">96</span>% cheaper
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section-padding">
+        <div class="container">
+            <h2 class="works-title">Three Steps. Five Minutes.</h2>
+
+            <div class="steps-container">
+                <!-- Step 1 -->
+                <article class="step-card" data-delay="0">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">💰</div>
+                    <h3 class="step-title">Load Money</h3>
+                    <p class="step-description">Add KES via M-Pesa or bank transfer. We convert it to USDT (digital dollars).</p>
+                </article>
+
+                <!-- Step 2 -->
+                <article class="step-card" data-delay="200">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">⚡</div>
+                    <h3 class="step-title">Send Instantly</h3>
+                    <p class="step-description">Enter their number. Money moves on blockchain. Arrives in 1-5 minutes.</p>
+                </article>
+
+                <!-- Step 3 -->
+                <article class="step-card" data-delay="400">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">📱</div>
+                    <h3 class="step-title">They Cash Out</h3>
+                    <p class="step-description">Recipient gets local currency via M-Pesa, bank, or mobile money. Easy.</p>
+                </article>
+            </div>
+
+            <p class="works-note">No crypto knowledge needed. Feels like M-Pesa, costs like nothing.</p>
+        </div>
+    </section>
+
+    <!-- Trust/Security Section -->
+    <section id="trust" class="section-padding">
+        <div class="container">
+            <h2 class="trust-title">Built for Kenyans. Backed by the Best.</h2>
+
+            <div class="trust-pillars">
+                <!-- Pillar 1 -->
+                <article class="trust-pillar" data-delay="0">
+                    <div class="pillar-icon">🛡️</div>
+                    <h3 class="pillar-title">Licensed & Secure</h3>
+                    <p class="pillar-description">Bank-level encryption. Multi-signature wallets. Your money is safer than in your M-Pesa.</p>
+                </article>
+
+                <!-- Pillar 2 -->
+                <article class="trust-pillar" data-delay="200">
+                    <div class="pillar-icon">⚡</div>
+                    <h3 class="pillar-title">Instant Settlement</h3>
+                    <p class="pillar-description">Blockchain doesn't sleep. Send at 2 AM, they get it at 2:01 AM.</p>
+                </article>
+
+                <!-- Pillar 3 -->
+                <article class="trust-pillar" data-delay="400">
+                    <div class="pillar-icon">💬</div>
+                    <h3 class="pillar-title">Real Support</h3>
+                    <p class="pillar-description">Kenyan team. WhatsApp support. We actually respond.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Call-to-Action Section -->
+    <section id="cta">
+        <div class="container cta-container">
+            <h2 class="cta-title">Stop Paying Banks to Send Your Money</h2>
+            <p class="cta-subtitle">Download ZeroPesa. First transfer under KES 100.</p>
+
+            <div class="cta-buttons">
+                <a href="#" class="btn-app-store">
+                    <span class="app-icon">&#63743;</span>
+                    <div class="app-text">
+                        <span class="app-label">Download on the</span>
+                        <span class="app-name">App Store</span>
+                    </div>
+                </a>
+                <a href="#" class="btn-google-play">
+                    <span class="app-icon">&#9654;</span>
+                    <div class="app-text">
+                        <span class="app-label">GET IT ON</span>
+                        <span class="app-name">Google Play</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="cta-qr">
+                <div class="qr-placeholder">
+                    <span>📱</span>
+                    <p>Scan to Download</p>
+                </div>
+            </div>
+
+            <p class="cta-availability">Available in Kenya, Nigeria, Ghana, Philippines. More countries coming soon.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-main">
+                <!-- Left Column -->
+                <div class="footer-brand">
+                    <h3 class="footer-logo">ZeroPesa</h3>
+                    <p class="footer-tagline">Send money the way it should be</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Twitter" class="social-link">
+                            <span>𝕏</span>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <span>in</span>
+                        </a>
+                        <a href="#" aria-label="WhatsApp" class="social-link">
+                            <span>📱</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column - Link Columns -->
+                <div class="footer-links">
+                    <!-- Product Column -->
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Product</h4>
+                        <ul class="footer-list">
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#how-it-works">How it Works</a></li>
+                            <li><a href="#solution">Pricing</a></li>
+                            <li><a href="#cta">Download</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Company Column -->
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Company</h4>
+                        <ul class="footer-list">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Legal Column -->
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Legal</h4>
+                        <ul class="footer-list">
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Compliance</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Row -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 ZeroPesa. All rights reserved.</p>
+                <div class="footer-country">
+                    <span class="country-selector">🇰🇪 Kenya ▼</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
