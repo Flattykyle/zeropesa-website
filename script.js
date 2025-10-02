@@ -172,6 +172,24 @@ const savingsDisplay = document.getElementById('savings');
 const savingsPercentDisplay = document.getElementById('savings-percent');
 const savingsHighlight = document.querySelector('.savings-highlight');
 
+// Calculate M-Pesa fees based on Kenya fee structure
+function calculateMPesaFee(amount) {
+    if (amount <= 500) return 11;
+    if (amount <= 1000) return 29;
+    if (amount <= 1500) return 29;
+    if (amount <= 2500) return 47;
+    if (amount <= 3500) return 53;
+    if (amount <= 5000) return 57;
+    if (amount <= 7500) return 78;
+    if (amount <= 10000) return 90;
+    if (amount <= 15000) return 100;
+    if (amount <= 20000) return 105;
+    if (amount <= 35000) return 108;
+    if (amount <= 50000) return 109;
+    // Above 50,000: 0.45% of amount
+    return Math.round(amount * 0.0045);
+}
+
 // Animate number count-up using requestAnimationFrame (GPU accelerated)
 function animateValue(element, start, end, duration = 600) {
     if (!element) return;
@@ -205,25 +223,23 @@ function calculateFees() {
 
     const amount = parseInt(amountSlider.value);
 
-    // Old Way Calculations (6% fee + 2% exchange markup)
-    const oldFee = amount * 0.06;
-    const oldMarkup = amount * 0.02;
-    const oldTotal = oldFee + oldMarkup;
-    const oldReceive = amount - oldTotal;
+    // M-Pesa (Mgreen app) Calculations
+    const mpesaFee = calculateMPesaFee(amount);
+    const mpesaTotal = mpesaFee;
+    const mpesaReceive = amount - mpesaTotal;
 
-    // ZeroPesa Calculations (0.3% fee, no markup)
-    const newFee = amount * 0.003;
-    const newTotal = newFee;
-    const newReceive = amount - newTotal;
+    // ZeroPesa Calculations (0.3% fee, minimum KES 10)
+    const zeropesaFee = Math.max(Math.round(amount * 0.003), 10);
+    const zeropesaTotal = zeropesaFee;
+    const zeropesaReceive = amount - zeropesaTotal;
 
     // Savings
-    const savings = oldTotal - newTotal;
-    const savingsPercent = Math.round((savings / oldTotal) * 100);
+    const savings = mpesaTotal - zeropesaTotal;
+    const savingsPercent = Math.round((savings / mpesaTotal) * 100);
 
     // Get current values for animation start
     const currentAmount = parseInt(currentAmountDisplay.textContent.replace(/,/g, '') || '0');
     const currentOldFee = parseInt(oldFeeDisplay.textContent.replace(/[^0-9]/g, '') || '0');
-    const currentOldMarkup = parseInt(oldMarkupDisplay.textContent.replace(/[^0-9]/g, '') || '0');
     const currentOldTotal = parseInt(oldTotalDisplay.textContent.replace(/[^0-9]/g, '') || '0');
     const currentOldReceive = parseInt(oldReceiveDisplay.textContent.replace(/[^0-9]/g, '') || '0');
     const currentNewFee = parseInt(newFeeDisplay.textContent.replace(/[^0-9]/g, '') || '0');
@@ -233,13 +249,12 @@ function calculateFees() {
 
     // Animate all values with requestAnimationFrame
     animateValue(currentAmountDisplay, currentAmount, amount, 400);
-    animateValue(oldFeeDisplay, currentOldFee, oldFee, 500);
-    animateValue(oldMarkupDisplay, currentOldMarkup, oldMarkup, 500);
-    animateValue(oldTotalDisplay, currentOldTotal, oldTotal, 500);
-    animateValue(oldReceiveDisplay, currentOldReceive, oldReceive, 500);
-    animateValue(newFeeDisplay, currentNewFee, newFee, 500);
-    animateValue(newTotalDisplay, currentNewTotal, newTotal, 500);
-    animateValue(newReceiveDisplay, currentNewReceive, newReceive, 500);
+    animateValue(oldFeeDisplay, currentOldFee, mpesaFee, 500);
+    animateValue(oldTotalDisplay, currentOldTotal, mpesaTotal, 500);
+    animateValue(oldReceiveDisplay, currentOldReceive, mpesaReceive, 500);
+    animateValue(newFeeDisplay, currentNewFee, zeropesaFee, 500);
+    animateValue(newTotalDisplay, currentNewTotal, zeropesaTotal, 500);
+    animateValue(newReceiveDisplay, currentNewReceive, zeropesaReceive, 500);
     animateValue(savingsDisplay, currentSavings, savings, 500);
 
     // Update savings percent
@@ -263,7 +278,7 @@ function calculateFees() {
         var(--grey-light) 100%)`;
 
     // Track calculator usage (prep for analytics)
-    console.log('Calculator Update:', { amount, savings, savingsPercent });
+    console.log('Calculator Update:', { amount, mpesaFee, zeropesaFee, savings, savingsPercent });
 }
 
 // Debounced calculator for performance - reduces unnecessary calculations
@@ -462,6 +477,37 @@ if (amountSlider) {
 }
 
 /* ============================================
+   FAQ ACCORDION FUNCTIONALITY
+   ============================================ */
+
+// FAQ toggle functionality
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        const isActive = faqItem.classList.contains('active');
+
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+        });
+
+        // Open clicked item if it wasn't active
+        if (!isActive) {
+            faqItem.classList.add('active');
+        }
+
+        // Track FAQ interaction (prep for analytics)
+        console.log('FAQ clicked:', {
+            question: question.textContent.trim().replace(/\+$/, ''),
+            action: isActive ? 'close' : 'open',
+            timestamp: new Date().toISOString()
+        });
+    });
+});
+
+/* ============================================
    ACCESSIBILITY ENHANCEMENTS
    ============================================ */
 
@@ -497,3 +543,4 @@ console.log('ZeroPesa initialized successfully', {
     userAgent: navigator.userAgent,
     viewport: `${window.innerWidth}x${window.innerHeight}`
 });
+
